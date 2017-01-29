@@ -23,8 +23,8 @@
 
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+  <link rel="stylesheet" href="css/weather-icons.min.css">
   <style>
 
     * {
@@ -41,19 +41,42 @@
       margin-bottom: 5%;
     }
 
-    #extra {
-      display: none;
-      padding: 2%;
-      font-size: 1.5em;
-      margin-bottom: 5%;
+    #seemore:hover {
+      background: rgba(255, 255, 255, 0.3);
     }
 
-    #icon, #temp {
+    #extra {
+      display: none;
+      margin-bottom: 5%;
+      background: rgba(0, 0, 0, 0.1);
+      width: 90%;
+      padding: 1%;
+    }
+
+    th {
+      font-size: 2.5em;
+      text-align: center;
+      border: none !important;
+      padding-top: 5%;
+    }
+
+    td {
+      border: none !important;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    #temp {
       font-size: 6em;
     }
 
-    #state, #message {
-      margin-top: 5%;
+    #icon {
+      font-size: 5em;
+      margin-left: 2%;
+    }
+
+    #city, #message {
+      margin-top: 15%;
       font-size: 2.5em;
     }
 
@@ -65,29 +88,58 @@
       font-size: 2em;
     }
 
-    #minutely {
-      font-size: 2.5em;
+    #currently {
+      font-size: 2em;
+    }
+
+    #daily {
+      font-size: 2em;
+      padding-bottom: 5%;
+    }
+
+    #feelslike {
+      font-size: 2em;
     }
 
   </style>
   <body>
     <center>
       <div id="message"></div>
-      <div id="state"></div>
+      <div id="city"></div>
       <div id="date"></div>
       <div id="time"></div>
-      <div id="icon"></div>
-      <div id="temp"></div>
-      <div id="minutely"></div>
+      <span id="temp"></span><span id="icon"></span>
+      <div id="currently"></div>
+      <div id="feelslike"></div>
 
       <button id="seemore">Read More</button>
 
       <div id="extra">
-        <div id="feelslike"></div>
-        <div id="precip"></div>
-        <div id="humidity"></div>
-        <div id="dewpoint"></div>
-        <div id="windspeed"></div>
+        <table id="table">
+          <tr>
+            <th>
+              <i class="wi wi-rain"></i>
+            </th>
+            <th>
+              <i class="wi wi-strong-wind"></i>
+            </th>
+            <th>
+              <i class="wi wi-humidity"></i>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <span id="precip"></span>
+            </td>
+            <td>
+              <span id="windspeed"></span>
+            </td>
+            <td>
+              <span id="humidity"></span>
+            </td>
+          </tr>
+        </table>
+        <div id="daily"></div>
       </div>
 
     </center>
