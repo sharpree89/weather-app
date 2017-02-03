@@ -1,8 +1,7 @@
 
 // dynamic background image based on current time
-// var d = new Date();
-// var h = d.getHours();
-var h = 11;
+var d = new Date();
+var h = d.getHours();
 var i;
 
 if(h < 6) {
