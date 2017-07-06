@@ -12,9 +12,8 @@ if(h < 6) {
   i = "images/daylight.png";
 } else if(h < 19) {
   i = "images/dawn.png";
-} else {
-  i = "images/night.png";
 }
+
 document.body.style.background = "url("+i+")";
 
 // display current date and time
